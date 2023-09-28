@@ -1,0 +1,20 @@
+ALGORITHM TRI_INSERTION
+VAR
+    T: ARRAY_OF INTEGER[50];
+    a,n,i,j: INTEGER;
+BEGIN
+REPEAT
+    write("donnez un entier");
+    read("n")
+UNTIL (n>0 and n<50)
+FOR i FROM 2 TO n-1 STEP 1  DO
+    a := T[i];
+    j := i;
+    WHILE (j>1 and T[j-1]> a) DO
+        T[j] := T[j-1];
+        j := j-1;
+    END_WHILE
+    T[j] := a ;
+END_FOR
+    
+END
